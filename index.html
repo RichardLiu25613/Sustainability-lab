@@ -31,7 +31,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Mabry Pro', 'Noto Sans TC', sans-serif;
-      background: url('assets/images/hero.jpg') center/cover fixed no-repeat;
+      background-color: #f5faf5;
       line-height: 1.6;
     }
 
@@ -60,26 +60,61 @@
     .navbar h1 {
       font-size: 1.5rem;
       margin: 0;
+      color: #ffffff;
     }
 
-    /* Hero 大圖 */
-    .hero {
-      height: 400px;
+    /* 🌄 Hero 主視覺圖片 */
+    .hero-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 60px; /* 預留 navbar 空間 */
     }
 
-    /* 內容區塊 */
+    /* 📦 內容卡片區 */
     section {
-      margin: 80px auto;
-      max-width: 900px;
       padding: 20px;
-      background: rgba(255,255,255,0.85);
+      margin: 20px auto;
+      max-width: 900px;
+      background: #fff;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     h2 {
-      color: #1c6e3c;
       font-weight: 700;
+      margin-bottom: 10px;
+      color: #1c6e3c;
+    }
+
+    /* 📅 時程 Timeline */
+    .timeline-container {
+      display: grid;
+      grid-template-columns: 1fr 3px 3fr;
+      gap: 10px;
+      position: relative;
+    }
+
+    .timeline-line {
+      background: #2f9e44;
+      grid-row: 1 / span 10;
+      width: 3px;
+      margin: 0 auto;
+    }
+
+    .timeline-event {
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .timeline-circle {
+      width: 12px;
+      height: 12px;
+      background: #2f9e44;
+      border-radius: 50%;
+      position: absolute;
+      left: -26px;
+      top: 5px;
     }
   </style>
 </head>
@@ -91,13 +126,50 @@
     <h1>AUO Sustainability Lab 永續競賽</h1>
   </div>
 
-  <!-- Hero 大圖 -->
-  <div class="hero"></div>
+  <!-- 🌄 Hero 主視覺圖片（保留清晰度） -->
+  <img class="hero-img" src="assets/images/hero.jpg" alt="AUO Sustainability Lab Hero Image">
 
-  <!-- 測試段落 -->
+  <!-- 📢 公告區 -->
   <section>
     <h2>📢 最新公告</h2>
-    <p>這是一個測試段落，<b>英文會用 Mabry Pro</b>，中文會用 Noto Sans TC。</p>
+    <p>競賽報名將於 <strong>2025/09/01</strong> 開始，請密切留意後續通知。</p>
+  </section>
+
+  <!-- 🎥 說明會影片 -->
+  <section>
+    <h2>🎥 說明會影片</h2>
+    <iframe width="100%" height="400"
+            src="https://www.youtube.com/embed/【換成你的YouTube影片ID】"
+            frameborder="0"
+            allowfullscreen></iframe>
+  </section>
+
+  <!-- 📅 活動時程 -->
+  <section>
+    <h2>📅 活動時程</h2>
+    <div class="timeline-container">
+      <div></div>
+      <div class="timeline-line"></div>
+      <div>
+        <div class="timeline-event">
+          <div class="timeline-circle"></div>
+          <h3>報名開始 – 2025/09/01</h3>
+          <p>開放所有員工報名參加，提交提案。</p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-circle"></div>
+          <h3>初選結果公布 – 2025/10/15</h3>
+          <p>公布進入決賽的隊伍名單。</p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-circle"></div>
+          <h3>決賽 & 頒獎 – 2025/12/10</h3>
+          <p>現場展示與頒發永續獎項。</p>
+        </div>
+      </div>
+    </div>
   </section>
 
 </body>
