@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AUO Sustainability Lab 永續競賽</title>
 
-  <!-- ✅ 中文字體：Noto Sans TC（Google Fonts） -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <style>
-    /* ✅ Mabry Pro 英文字體（從 GitHub 上傳的 OTF） */
     @font-face {
       font-family: 'Mabry Pro';
       src: url('assets/fonts/Mabry-Regular-Pro.otf') format('opentype');
@@ -26,7 +24,6 @@
       font-weight: 700;
     }
 
-    /* 🌿 全站字體設定 */
     body {
       margin: 0;
       padding: 0;
@@ -44,7 +41,6 @@
       background: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      color: #fff;
       display: flex;
       align-items: center;
       padding: 10px 20px;
@@ -61,6 +57,7 @@
       font-size: 1.5rem;
       margin: 0;
       color: #ffffff;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.4); /* ✅ 白字加陰影 */
     }
 
     /* 🌄 Hero 主視覺圖片 */
@@ -68,10 +65,9 @@
       width: 100%;
       height: auto;
       display: block;
-      margin-top: 60px; /* 預留 navbar 空間 */
+      margin-top: 60px;
     }
 
-    /* 📦 內容卡片區 */
     section {
       padding: 20px;
       margin: 20px auto;
@@ -87,7 +83,7 @@
       color: #1c6e3c;
     }
 
-    /* 📅 時程 Timeline */
+    /* Timeline */
     .timeline-container {
       display: grid;
       grid-template-columns: 1fr 3px 3fr;
@@ -120,28 +116,35 @@
 </head>
 <body>
 
-  <!-- 🌟 玻璃擬態透明頂欄 -->
+  <!-- 🌟 玻璃擬態 Navbar -->
   <div class="navbar">
     <img src="assets/images/auo-logo.png" alt="AUO Logo">
     <h1>AUO Sustainability Lab 永續競賽</h1>
   </div>
 
-  <!-- 🌄 Hero 主視覺圖片（保留清晰度） -->
+  <!-- 🌄 Hero 主視覺 -->
   <img class="hero-img" src="assets/images/hero.jpg" alt="AUO Sustainability Lab Hero Image">
 
-  <!-- 📢 公告區 -->
+  <!-- 🎯 賽事簡介 -->
   <section>
-    <h2>📢 最新公告</h2>
-    <p>競賽報名將於 <strong>2025/09/01</strong> 開始，請密切留意後續通知。</p>
+    <h2>🎯 賽事簡介</h2>
+    <p>AUO Sustainability Lab 永續競賽旨在激發員工的創新思維，鼓勵跨部門合作，提出對公司 ESG、永續發展及創新有幫助的提案。</p>
   </section>
 
-  <!-- 🎥 說明會影片 -->
+  <!-- 📜 參賽辦法 -->
   <section>
-    <h2>🎥 說明會影片</h2>
-    <iframe width="100%" height="400"
-            src="https://www.youtube.com/embed/【換成你的YouTube影片ID】"
-            frameborder="0"
-            allowfullscreen></iframe>
+    <h2>📜 參賽辦法</h2>
+    <ul>
+      <li>參賽對象：AUO 全體員工（可跨部門組隊）</li>
+      <li>報名方式：填寫報名表並提交提案構想</li>
+      <li>報名時間：2025/09/01 - 2025/09/30</li>
+    </ul>
+  </section>
+
+  <!-- 🏆 獎勵與評分方式 -->
+  <section>
+    <h2>🏆 獎勵與評分方式</h2>
+    <p>評分標準包含創新性、可行性、永續影響力，前三名將獲得公司頒發的獎金與榮譽證書。</p>
   </section>
 
   <!-- 📅 活動時程 -->
@@ -170,6 +173,23 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- ❓ FAQ -->
+  <section>
+    <h2>❓ 常見問題 FAQ</h2>
+    <p><b>Q: 一隊幾人？</b><br> A: 建議 3-5 人，跨部門組隊更佳。</p>
+    <p><b>Q: 是否可以同時參加不同隊伍？</b><br> A: 每位同仁限參加 1 支隊伍。</p>
+  </section>
+
+  <!-- 📬 聯絡我們 -->
+  <section>
+    <h2>📬 聯絡我們</h2>
+    <p>如果有任何問題，請聯絡：<br>
+    <b>HR Richard</b><br>
+    分機：501120<br>
+    Email：<a href="mailto:Richard.YC.Liu@auo.com">Richard.YC.Liu@auo.com</a>
+    </p>
   </section>
 
 </body>
