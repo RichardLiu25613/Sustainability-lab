@@ -32,7 +32,7 @@
       line-height: 1.6;
     }
 
-    /* 🌟 玻璃擬態 Navbar */
+    /* 🌟 Glassmorphism Navbar */
     .navbar {
       position: fixed;
       top: 0;
@@ -56,8 +56,8 @@
     .navbar h1 {
       font-size: 1.5rem;
       margin: 0;
-      color: #ffffff;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.4); /* ✅ 白字加陰影 */
+      color: #154d2d; /* 深綠 */
+      text-shadow: 0 1px 3px rgba(255,255,255,0.4);
     }
 
     /* 🌄 Hero 主視覺圖片 */
@@ -83,7 +83,7 @@
       color: #1c6e3c;
     }
 
-    /* Timeline */
+    /* 📅 Timeline */
     .timeline-container {
       display: grid;
       grid-template-columns: 1fr 3px 3fr;
@@ -112,11 +112,57 @@
       left: -26px;
       top: 5px;
     }
+
+    /* 🎤 Judges Section (Horizontal Scroll) */
+    .judges-wrapper {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .judge-card {
+      flex: 0 0 80%;
+      scroll-snap-align: center;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      min-width: 280px;
+    }
+
+    .judge-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    /* 📌 Register Button */
+    .register-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #1c6e3c;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 10px;
+      transition: 0.2s;
+    }
+
+    .register-btn:hover {
+      background: #14552c;
+    }
   </style>
 </head>
 <body>
 
-  <!-- 🌟 玻璃擬態 Navbar -->
+  <!-- 🌟 Navbar -->
   <div class="navbar">
     <img src="assets/images/auo-logo.png" alt="AUO Logo">
     <h1>AUO Sustainability Lab 永續競賽</h1>
@@ -125,70 +171,91 @@
   <!-- 🌄 Hero 主視覺 -->
   <img class="hero-img" src="assets/images/hero.jpg" alt="AUO Sustainability Lab Hero Image">
 
-  <!-- 🎯 賽事簡介 -->
+  <!-- 🎯 Intro -->
   <section>
-    <h2>🎯 賽事簡介</h2>
-    <p>AUO Sustainability Lab 永續競賽旨在激發員工的創新思維，鼓勵跨部門合作，提出對公司 ESG、永續發展及創新有幫助的提案。</p>
+    <h2>🎯 About the Competition</h2>
+    <p>The AUO Sustainability Lab Competition aims to inspire innovative thinking and encourage cross-department collaboration to generate impactful ESG and sustainability solutions.</p>
   </section>
 
-  <!-- 📜 參賽辦法 -->
+  <!-- 📜 Registration Info -->
   <section>
-    <h2>📜 參賽辦法</h2>
+    <h2>📜 Registration Info</h2>
     <ul>
-      <li>參賽對象：AUO 全體員工（可跨部門組隊）</li>
-      <li>報名方式：填寫報名表並提交提案構想</li>
-      <li>報名時間：2025/09/01 - 2025/09/30</li>
+      <li>Eligibility: All AUO employees (cross-department teams encouraged)</li>
+      <li>Registration Method: Submit via ALS system</li>
+      <li>Registration Period: 2025/09/01 - 2025/09/30</li>
     </ul>
+    <a class="register-btn" href="https://als.auo.com" target="_blank">👉 Register via ALS</a>
   </section>
 
-  <!-- 🏆 獎勵與評分方式 -->
+  <!-- 🏆 Judges -->
   <section>
-    <h2>🏆 獎勵與評分方式</h2>
-    <p>評分標準包含創新性、可行性、永續影響力，前三名將獲得公司頒發的獎金與榮譽證書。</p>
+    <h2>🎤 Judges</h2>
+    <div class="judges-wrapper">
+      <div class="judge-card">
+        <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Dr. Emily Carter">
+        <h3>Dr. Emily Carter</h3>
+        <p>Sustainability Consultant<br>“Expert in corporate ESG strategy and sustainable finance.”</p>
+      </div>
+      <div class="judge-card">
+        <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Prof. Daniel Smith">
+        <h3>Prof. Daniel Smith</h3>
+        <p>Climate Policy Advisor<br>“Specializes in climate impact assessments and policy innovation.”</p>
+      </div>
+      <div class="judge-card">
+        <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Dr. Sophia Martinez">
+        <h3>Dr. Sophia Martinez</h3>
+        <p>Circular Economy Specialist<br>“Focused on integrating circular economy into corporate operations.”</p>
+      </div>
+      <div class="judge-card">
+        <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Mr. James Wong">
+        <h3>Mr. James Wong</h3>
+        <p>Innovation Strategist<br>“Drives transformative solutions for green technologies.”</p>
+      </div>
+      <div class="judge-card">
+        <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Ms. Olivia Johnson">
+        <h3>Ms. Olivia Johnson</h3>
+        <p>Renewable Energy Advisor<br>“Helps organizations transition to clean energy solutions.”</p>
+      </div>
+    </div>
+    <p style="text-align:center; font-size:0.9rem; color:#555;">👉 Swipe to see more judges</p>
   </section>
 
-  <!-- 📅 活動時程 -->
+  <!-- 📅 Timeline -->
   <section>
-    <h2>📅 活動時程</h2>
+    <h2>📅 Timeline</h2>
     <div class="timeline-container">
       <div></div>
       <div class="timeline-line"></div>
       <div>
         <div class="timeline-event">
           <div class="timeline-circle"></div>
-          <h3>報名開始 – 2025/09/01</h3>
-          <p>開放所有員工報名參加，提交提案。</p>
+          <h3>Registration Opens – 2025/09/01</h3>
+          <p>All employees can register and submit proposals.</p>
         </div>
 
         <div class="timeline-event">
           <div class="timeline-circle"></div>
-          <h3>初選結果公布 – 2025/10/15</h3>
-          <p>公布進入決賽的隊伍名單。</p>
+          <h3>Preliminary Selection – 2025/10/15</h3>
+          <p>Shortlisted teams will be announced.</p>
         </div>
 
         <div class="timeline-event">
           <div class="timeline-circle"></div>
-          <h3>決賽 & 頒獎 – 2025/12/10</h3>
-          <p>現場展示與頒發永續獎項。</p>
+          <h3>Final & Awards – 2025/12/10</h3>
+          <p>Live presentations and awards ceremony.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ❓ FAQ -->
+  <!-- 📬 Contact -->
   <section>
-    <h2>❓ 常見問題 FAQ</h2>
-    <p><b>Q: 一隊幾人？</b><br> A: 建議 3-5 人，跨部門組隊更佳。</p>
-    <p><b>Q: 是否可以同時參加不同隊伍？</b><br> A: 每位同仁限參加 1 支隊伍。</p>
-  </section>
-
-  <!-- 📬 聯絡我們 -->
-  <section>
-    <h2>📬 聯絡我們</h2>
-    <p>如果有任何問題，請聯絡：<br>
+    <h2>📬 Contact</h2>
+    <p>If you have any questions, please contact:<br>
     <b>HR Richard</b><br>
-    分機：501120<br>
-    Email：<a href="mailto:Richard.YC.Liu@auo.com">Richard.YC.Liu@auo.com</a>
+    Ext: 501120<br>
+    Email: <a href="mailto:Richard.YC.Liu@auo.com">Richard.YC.Liu@auo.com</a>
     </p>
   </section>
 
